@@ -37,7 +37,7 @@
              <input type="submit" class="btn btn-primary" name="submit" value="save customer">
              <a class="btn btn-warning float-right"
               href="{{ url ('customer') }}">
-              <i class="fas fa-backward"></i></i> Kembali </a>
+              <i class="fas fa-backward"></i></i> cancel </a>
               </div>
 
               </form>
