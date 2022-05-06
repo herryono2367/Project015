@@ -8,13 +8,13 @@
 <div class="row mt-4">
     <div class="col-10">
         <div class="card-header">
-            Data Customer
+            Data soal
             <a class="btn btn-primary float-right"
-            href="{{ url ('customer/create')}}"> <i class="fas fa-plus-square"></i></i> tambah data </a></div>
+            href="{{ url ('soal/create')}}"> <i class="fas fa-plus-square"></i></i> tambah data </a></div>
             <div class="card-body">
                 <table class="table table-bordered">
                      <thead>
-                       <tr>
+                       <tr style="background-color: #00f5ff;">
                             <th>no</th>
                             <th>nama_mk</th>
                             <th>dosen</th>
@@ -24,20 +24,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($customers as $customer)
+                    @foreach($soals as $soal)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$customer->nama_mk}}</td>
-                            <td>{{$customer->dosen}}</td>
-                            <td>{{$customer->jumlah_soal}}</td>
-                            <td>{{$customer->keterangan}}</td>
-                            <td>
-                            <a href="{{url('customer/edit')}}/{{$customer->id}}" class="btn btn-warning">update</a>
-                               
-                           </form> 
+                            <td>{{$soal->nama_mk}}</td>
+                            <td>{{$soal->dosen}}</td>
+                            <td>{{$soal->jumlah_soal}}</td>
+                            <td>{{$soal->keterangan}}</td>
+                            <td >
+                                
+                            <a href="{{url('soal/edit')}}/{{$soal->id}}" class="btn btn-warning">update</a>
+                            </form> 
                            </td>
                            <td>
-                           <form action="{{ url("customers/{$customer->id}")}}" method="post">
+                           <form action="{{ url("soals/{$soal->id}")}}" method="post"  >
                                @csrf
                                @method('DELETE')
                                <button class="btn btn-danger">hapus</button>

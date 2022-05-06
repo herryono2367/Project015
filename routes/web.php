@@ -52,10 +52,10 @@ Route::get('/tentang-kami', function(){
 
 //crud data
 
-Route::get('customer', 'CustomerController@index');
-Route::get('customer/create', 'CustomerController@create');
-Route::post('customer/store', 'CustomerController@store');
-Route::delete('/customers/{id}', 'CustomerController@destroy');
-Route::post('customer/update', 'CustomerController@update');
-Route::get('customer/edit/{id}', 'CustomerController@edit');
+Route::get('soal', 'soalController@index');
+Route::get('soal/create', 'SoalController@create');
+Route::post('soal/store', 'SoalController@store');
+Route::delete('/soals/{id}', 'SoalController@destroy');
+Route::put('soal/{id}', 'SoalController@update');
+Route::get('soal/edit/{id}', 'SoalController@edit');
 
