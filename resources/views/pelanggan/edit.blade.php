@@ -14,8 +14,8 @@
             </a>
               </div>
                   <div class="card-body" >
-                    <form action="{{url ('soal/{id}')}}" method="post" >
-                      @method('PUT')
+                    <form action="{{route('soal.update', $soal->id)}}" method="post" >
+                      @method('PATCH')
                       @csrf
                       <div class="form-group">
                           <label>nama_mk</label>

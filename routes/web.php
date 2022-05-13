@@ -56,6 +56,6 @@ Route::get('soal', 'soalController@index');
 Route::get('soal/create', 'SoalController@create');
 Route::post('soal/store', 'SoalController@store');
 Route::delete('/soals/{id}', 'SoalController@destroy');
-Route::put('soal/{id}', 'SoalController@update');
+Route::patch('soal/update/{soal}', 'SoalController@update')->name('soal.update');
 Route::get('soal/edit/{id}', 'SoalController@edit');
 

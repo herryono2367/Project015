@@ -40,20 +40,10 @@ public function edit($id)
 
       return view('pelanggan.edit',  compact('soal'));
    }
-   public function update(Request $request )
+   public function update(Request $request, Soal $soal )
    {
-       $nama_mk = $request->nama_mk;
-      $soal = Soal::where('id', $request->id)
-                ->update([
-                       'nama_mk' => $request->nama_mk,
-                       'dosen' => $request->dosen,
-                       'jumlah_soal' => $request->jumlah_soal,
-                       'keterangan' => $request->keterangan,
-                       
-                ]);
-            
-                $data= Soal::create($request->all());
-      return redirect('soal');
-      
+    $soal->update($request->all());
+    return redirect('soal');
+
    }
 }
